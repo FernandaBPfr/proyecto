@@ -1,0 +1,23 @@
+fun main() {
+    val numero1 = 7
+    val numero2 = 9
+    val operacion = "+" // Cambia esto a "-", "*", "/" para probar otras operaciones
+    val resultado = when (operacion) {
+        "+" -> numero1 + numero2
+        "-" -> numero1 - numero2
+        "*" -> numero1 * numero2
+        "/" -> {
+            if (numero2 != 0) {
+                numero1 / numero2
+            } else {
+                println("Error: División entre cero no permitida.")
+                return
+            }
+        }
+        else -> {
+            println("Operación no válida.")
+            return
+        }
+    }
+    println("El resultado de $numero1 $operacion $numero2 es: $resultado")
+}
